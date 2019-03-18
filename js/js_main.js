@@ -26,7 +26,7 @@ function click_login() {
       confirmButtonColor: '#009da5',
       confirmButtonText: 'ปิด'
     }).then((result) => {
-      window.location = 'home.html'
+      window.location = 'index.html'
     })
   }
 }
