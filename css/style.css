@@ -1,0 +1,109 @@
+* {
+  font-family:
+}
+
+.contain-logo {
+  margin-bottom: 2rem;
+}
+
+.contain-logo img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.input_kubota:focus {
+  border: 1px solid #009da5;
+  box-shadow: 0 0 0 0.2rem rgba(0, 157, 165, 0.4);
+}
+
+.btn-kubota-login {
+  background-color: #009da5;
+  border-radius: 0.35rem;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.btn-kubota-login:hover {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  .contain-logo {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .contain-form-login {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .contain-logo {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .contain-form-login {
+    width: 50%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) {}
+
+@media (max-width: 991px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .contain-logo {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contain-form-login {
+    width: 50%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {}
+
+@media (max-width: 1199px) {}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contain-logo {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contain-form-login {
+    width: 50%;
+    max-width: 450px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .contain-logo {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .contain-form-login {
+    width: 100%;
+    max-width: 400px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

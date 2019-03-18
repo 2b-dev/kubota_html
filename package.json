@@ -1,0 +1,27 @@
+{
+  "name": "kubota_html",
+  "version": "1.0.0",
+  "description": "Kubota beacon HTML only",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2b-dev/kubota_html.git"
+  },
+  "keywords": [
+    "html",
+    "kubota",
+    "baecon"
+  ],
+  "author": "Nu Chaimongkon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2b-dev/kubota_html/issues"
+  },
+  "homepage": "https://github.com/2b-dev/kubota_html#readme",
+  "dependencies": {
+    "mdbootstrap": "^4.7.4"
+  }
+}
