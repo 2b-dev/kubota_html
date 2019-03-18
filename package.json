@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/2b-dev/kubota_html#readme",
   "dependencies": {
-    "mdbootstrap": "^4.7.4"
+    "mdbootstrap": "^4.7.4",
+    "sweetalert2": "^8.5.0"
   }
 }
