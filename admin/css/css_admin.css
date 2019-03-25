@@ -24,6 +24,17 @@
   border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
 
+.ul-lv-2 {
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.ul-lv-2 .list-lv-2 {
+  padding: 0.65rem 0.5rem;
+}
+
 .sidebar-fixed .list-group .list-lv-1:last-of-type {
   border-bottom: none;
 }
