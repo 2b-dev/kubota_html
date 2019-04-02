@@ -64,6 +64,57 @@
   max-height: 150px;
 }
 
+.div-contain-pic-upload {
+  width: 250px;
+  height: 250px;
+  background-color: #009da5;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 3px dashed #009da5;
+}
+
+.div-contain-pic-upload .overlay-text-upload {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.466);
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.div-contain-pic-upload:hover .overlay-text-upload {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-kubota {
+  background-color: #009da5;
+  font-size: 16px;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 200px;
+}
+
+footer {
+  background-color: #009da5;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #009da5;
+}
+
+#data-table thead tr th,
+#data-table tbody tr td {
+  text-align: center;
+}
+
 @media (min-width: 1200px) {
 
   .navbar,

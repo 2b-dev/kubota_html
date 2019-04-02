@@ -55,10 +55,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left -->
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link waves-effect" href="index.html">หน้าแรก</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item active dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">จัดการ Beacon</a>
               <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
@@ -108,9 +108,9 @@
       <ul id="sidemenu-admin" class="list-group list-group-flush">
         <li class="list-lv-1 waves-effect"><a href="index.html" class="">หน้าแรก</a></li>
         <li class="list-lv-1 waves-effect">
-          <a class="collapsed" data-toggle="collapse" data-parent="#sidemenu-admin" href="#manageBeacon"
-            aria-expanded="false" aria-controls="manageBeacon">จัดการ Beacon</a>
-          <div id="manageBeacon" class="collapse" role="tabpanel" data-parent="#sidemenu-admin">
+          <a class="" data-toggle="collapse" data-parent="#sidemenu-admin" href="#manageBeacon" aria-expanded="false"
+            aria-controls="manageBeacon">จัดการ Beacon</a>
+          <div id="manageBeacon" class="collapse show" role="tabpanel" data-parent="#sidemenu-admin">
             <ul class="ul-lv-2">
               <li class="list-lv-2">
                 <a href="add_beacon.html">เพิ่ม Beacon</a>
@@ -168,18 +168,65 @@
       <div class="card mb-4 wow fadeIn">
         <!--Card content-->
         <div class="card-body d-sm-flex justify-content-between">
-          <h4 class="mb-2 mb-sm-0 pt-1">
-            <span>Dashboard</span>
-          </h4>
+          <h5 class="mb-2 mb-sm-0 pt-1">
+            <span>จัดการ Beacon</span>
+            <span>/</span>
+            <span>เพิ่ม Beacon</span>
+          </h5>
         </div>
       </div>
       <!-- Heading -->
 
-
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+        <!--Grid column-->
+        <div class="col-md-12 mb-4">
+          <!--Card-->
+          <div class="card">
+            <!--Card content-->
+            <div class="card-body p-4">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-12 col-lg-7 mb-3">
+                  <label for="">ชื่อ Beacon</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-12 col-md-12 col-lg-7 mb-3">
+                  <label for="">Mac Address Beacon</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-12 col-md-12 col-lg-7 mb-3">
+                  <label for="">ชื่อผู้ถือครอง</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-12 col-md-12 col-lg-7 mb-3">
+                  <label for="">นามสกุลผู้ถือครอง</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-12 col-md-12 col-lg-7 mb-3">
+                  <div class="div-contain-pic-upload" onclick="uploadIMG();">
+                    <img id="profile-upload" src="./images/upload_pic.png" class="img-fluid">
+                    <div class="overlay-text-upload">
+                      <span>อัพโหลดรูปภาพ</span>
+                    </div>
+                  </div>
+                  <input id="input-file" type="file" hidden>
+                </div>
+                <div class="col-12 col-md-12 col-lg-7 mb-3 text-center">
+                  <button id="btnsave" class="btn btn-kubota">บันทึก</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/.Card-->
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
 
     </div>
   </main>
   <!--Main layout-->
+
 
   <footer class="page-footer text-center font-small fixed-bottom darken-2 mt-4 wow fadeIn">
     <div class="footer-copyright py-3">
@@ -209,8 +256,49 @@
 <script type="text/javascript">
   // Animations initialization
   new WOW().init();
+
+  function uploadIMG() {
+    $('#input-file').click();
+  }
+  $(function () {
+    $("#input-file").change(function () {
+      var input = this;
+      var url = $(this).val();
+      var ext = url.substring(url.lastIndexOf(".") + 1).toLowerCase();
+      if (
+        input.files &&
+        input.files[0] &&
+        (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")
+      ) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $("#profile-upload").attr("src", e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+      } else {
+        $("#profile-upload").attr("src", "./images/upload_pic.png");
+      }
+    });
+  });
 </script>
 
-
+<script>
+  $("#btnsave").click(function () {
+    /*ตรงนี้ ก็รับค่าโพสมานะ แล้วก็เอา repon กลับมา*/
+    /*สำเร็จ*/
+    Swal.fire(
+      'สำเร็จ',
+      'เพิ่มข้อมูล Beacon เรียบร้อย',
+      'success'
+    )
+    /*ไม่สำเร็จ*/
+    /*Swal.fire(
+      'ผิดพลาด',
+      'มีบางอย่างผิดพลาด กรุณาลองใหม่อีกครับ',
+      'error'
+    )*/
+  })
+</script>
 
 </html>
